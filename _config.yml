@@ -1,11 +1,11 @@
 plugins:
   - jekyll-relative-links
 # theme: minima
+theme: jekyll-theme-cayman
 relative_links:
   enabled: true
   collections: true
 title: Recognizing Illegible Handwriting
-theme: jekyll-theme-cayman
 include:
   - CONTRIBUTING.md
   - README.md
