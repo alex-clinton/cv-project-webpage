@@ -6,7 +6,7 @@ relative_links:
   collections: true
 title: Recognizing Illegible Handwriting
 authors: alex,
-navigation:
+header_pages:
 include:
   - CONTRIBUTING.md
   - README.md
