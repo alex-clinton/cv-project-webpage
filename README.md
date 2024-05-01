@@ -6,7 +6,8 @@ layout: default
 
 Digital writing has seen a signficant rise amongst students, academics, and buisness professionals due to the data process capabilities of tablets and imrpoved precision on styluses. Taking notes on a tablet provides allows users to easily organize, share, and search their notes. The search function in particular makes use of a technology called optical character recognition or OCR. OCR models leverage tools from computer vision and machine learning to acurately classify a user's handwritting... unless your name is Thomas Zeng. 
 
-![Alt text](thomas_notability.png "Optional title")
+<!--- ![Alt text](thomas_notability.png "We're in for a challenge") -->
+<img src="thomas_notability.jpg" alt="Alt text" align="left" width="200"/>
 
 Thomas uses his iPad and a popular app called notability to manage the notes he takes. However, because of his unusually messy handwriting, notability's built in OCR model cannot recognize his handwriting meaning he cannot search his notes. This problem isn't specific to notability, other sophisticated OCR models also fail to recognize Thomas' handwriting. While handwriting recognition is considered to be a solved problem, we argue that our problem is more difficult because it is not “well defined”, in the sense that it is hard for humans to recognize what Thomas writes.
 Being the good friends we are, we made our project goal to create a model that could recognize his writing along. More broadly, our goal is to design a handwriting recongition system that superseeds human capabilities.
