@@ -3,6 +3,14 @@ layout: default
 -->
 
 # Problem Statement
+
+Digital writing has seen a signficant rise amongst students, academics, and buisness professionals due to the data process capabilities of tablets and imrpoved precision on styluses. Taking notes on a tablet provides allows users to easily organize, share, and search their notes. The search function in particular makes use of a technology called optical character recognition or OCR.
+
+
+
+
+Digital writing has seen a signficant rise amongst students, academics, and buisness professionals due to the data process capabilities of tablets and imrpoved precision on styluses. Taking notes on a tablet provides benefits in for organization, sharing, backup, and many more 
+
 more text here more text heremore text heremore text heremore text heremore text heremore text heremore text here
 
 ## Datasets
