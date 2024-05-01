@@ -1,6 +1,4 @@
-# Recognizing Illegible Handwriting
 
----
 ## Problem Statement
 more text here more text heremore text heremore text heremore text heremore text heremore text heremore text here
 
@@ -9,7 +7,7 @@ more text here more text heremore text heremore text heremore text heremore text
 ## Evaluation Metrics
 
 ## Approch 1
----
+
 
 ## Approch 2
 
