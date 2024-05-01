@@ -1,4 +1,6 @@
-
+---
+layout: default
+---
 ## Problem Statement
 more text here more text heremore text heremore text heremore text heremore text heremore text heremore text here
 
