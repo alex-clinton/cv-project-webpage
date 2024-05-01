@@ -15,6 +15,7 @@ Digital writing has seen a signficant rise amongst students, academics, and buis
 </style>
 
 <img src="thomas_notability.png" alt="Alt text" align="right" class="padded-image" width="300"/>
+<sub> test </sub>
 
 ## Project Goal
 Thomas uses his iPad and a popular app called notability to manage the notes he takes. However, because of his unusually messy handwriting, notability's built in OCR model cannot recognize his handwriting meaning he cannot search his notes. This problem isn't specific to notability, other sophisticated OCR models also fail to recognize Thomas' handwriting. While handwriting recognition is considered to be a solved problem, we argue that our problem is more difficult because it is not “well defined”, in the sense that it is hard for humans to recognize what Thomas writes.
