@@ -17,19 +17,22 @@ Digital writing has seen a signficant rise amongst students, academics, and buis
 <img src="thomas_notability.png" alt="Alt text" align="right" class="padded-image" width="300"/> -->
 
 <style>
+  .image-container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
   .padded-image {
     padding: 10px; /* Adjust the padding value as needed */
   }
-  .image-container {
-    text-align: center; /* Center the title text */
+  .title {
     margin-top: 5px; /* Add some space between the image and the title text */
   }
 </style>
 
 <div class="image-container">
   <img src="thomas_notability.png" alt="Alt text" class="padded-image" width="300"/>
-  <br> <!-- Add a line break -->
-  Title text
+  <div class="title">Title text</div>
 </div>
 
 ## Project Goal
