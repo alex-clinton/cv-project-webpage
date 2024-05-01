@@ -6,6 +6,7 @@ relative_links:
   enabled: true
   collections: true
 title: Recognizing Illegible Handwriting
+description: By Khoi Nguyen, Alex Clinton, Zhuoming Liu, and Thomas Zeng
 include:
   - CONTRIBUTING.md
   - README.md
