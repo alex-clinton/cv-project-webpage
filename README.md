@@ -14,8 +14,7 @@ Digital writing has seen a signficant rise amongst students, academics, and buis
   }
 </style>
 
-<img src="thomas_notability.png" alt="Alt text" align="right" class="padded-image" width="300"/>
-<sub> test </sub> -->
+<img src="thomas_notability.png" alt="Alt text" align="right" class="padded-image" width="300"/> -->
 
 <style>
   .padded-image {
