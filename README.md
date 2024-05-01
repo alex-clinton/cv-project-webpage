@@ -8,15 +8,15 @@ layout: default
 Digital writing has seen a signficant rise amongst students, academics, and buisness professionals due to the data process capabilities of tablets and imrpoved precision on styluses. Taking notes on a tablet provides allows users to easily organize, share, and search their notes. The search function in particular makes use of a technology called optical character recognition or OCR. OCR models leverage tools from computer vision and machine learning such as convolutional neural network and vision transformers. Furthermore, these methods can acurately classify a user's handwritting... unless your name is Thomas Zeng. 
 
 <!--- ![Alt text](thomas_notability.png "We're in for a challenge") -->
-<!--- <style>
+<style>
   .padded-image {
     padding: 10px; /* Adjust the padding value as needed */
   }
 </style>
 
-<img src="thomas_notability.png" alt="Alt text" align="right" class="padded-image" width="300"/> -->
+<img src="thomas_notability.png" alt="Alt text" align="right" class="padded-image" width="300"/>
 
-<style>
+<!--- <style>
   .image-container {
     display: flex; /* Use flexbox layout */
     flex-direction: column; /* Stack elements vertically */
@@ -28,7 +28,7 @@ Digital writing has seen a signficant rise amongst students, academics, and buis
   .title {
     margin-top: 5px; /* Add some space between the image and the title text */
   }
-</style>
+</style> -->
 
 <div class="image-container">
   <img src="thomas_notability.png" alt="Alt text" class="padded-image" width="300"/>
