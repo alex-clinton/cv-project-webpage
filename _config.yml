@@ -4,6 +4,7 @@ theme: minima
 relative_links:
   enabled: true
   collections: true
+title: Recognizing Illegible Handwriting
 include:
   - CONTRIBUTING.md
   - README.md
