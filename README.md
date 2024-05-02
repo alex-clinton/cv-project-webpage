@@ -139,9 +139,19 @@ The results shown above demonstrate that Thomas' dataset is both visually more d
 
 ## Approch 2 Supervised domain adaptation
 
+<img src="supervised_domain_adaptation.png" alt="Alt text" class="padded-image" width="900"/>
+
+The above figure is borrowed from [4].
+
 ## Approch 3 Transfer learning
 
+<img src="transfer_learning.png" alt="Alt text" class="padded-image" width="900"/>
+
+The above figure is borrowed from [1].
+
 ## Approch 4 Dual-decoder
+
+<img src="dual_decoder.png" alt="Alt text" class="padded-image" width="900"/>
 
 ## Approch 5 Meta learning
 
