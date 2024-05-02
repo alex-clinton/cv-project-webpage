@@ -56,6 +56,12 @@ Our first approach was to take a modern OCR model and fine-tune it on Thomas' ha
 
 <img src="trocr.png" alt="Alt text" class="padded-image" width="900"/>
 
+In order to enable more efficient fine-tuning we also ran experiments where we frooze all of the weights in the encoder and kept the decoder weigths trainable. We also varied the number of images used in fine-tuning to see how much data was needed to adapt to a new writer.
+
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
 
 ## Approch 2 Supervised domain adaptation
 
