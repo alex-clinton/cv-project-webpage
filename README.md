@@ -44,7 +44,7 @@ To represent Thomas' handwriting, we created a dataset of 60 images of sentences
 
 <img src="dataset.png" alt="Alt text" align="right" class="padded-image" width="500"/>
 
-We wanted to keep the datasets we created relatively small to limit the amount data a user with messy handwriting would need to provide to get an adapted model. However, some of our methods required a larger volume of data along with text from a large pool of writers. For these purposes, we used the IAM dataset, which is composed of ~10,000 lines of text from hundreds of unique writers.
+We wanted to keep the datasets we created relatively small to limit the amount data a user with messy handwriting would need to provide to get an adapted model. To mitigate this restriction we used data augmentation to increase the diversity of our data, mainly through random rotaions and amounts of gaussian blurring. However, some of our methods required a larger volume of data along with text from a large pool of writers. For these purposes, we used the IAM dataset, which is composed of ~10,000 lines of text from hundreds of unique writers.
 
 ## Evaluation Metrics
 
