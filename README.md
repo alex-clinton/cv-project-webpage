@@ -154,39 +154,59 @@ To leverage writing samples from a variety of writers we applied MAML [3] to the
 <div style="display: flex; justify-content: center;">
     <table>
         <tr>
-            <th>Finetuned on</th>
+            <th>Checkpoint</th>
             <th>Dataset</th>
             <th>CER</th>
         </tr>
         <tr>
-            <td>None</td>
+            <td>Original TrOCR checkpoint</td>
             <td>Thomas</td>
             <td>5.06</td>
         </tr>
         <tr>
-            <td>Entire model</td>
+            <td>Original TrOCR checkpoint (with finetuning)</td>
             <td>Thomas</td>
             <td>0.84</td>
         </tr>
         <tr>
-            <td>Decoder only</td>
+            <td>MAML checkpoint (with finetuning)</td>
+            <td>Thomas</td>
+            <td>0.78</td>
+        </tr>
+        <tr>
+            <td>Original checkpoint (with finetuning decoder)</td>
             <td>Thomas</td>
             <td>0.65</td>
         </tr>
         <tr>
-            <td>None</td>
+            <td>MAML checkpoint (with finetuning decoder)</td>
+            <td>Thomas</td>
+            <td>0.51</td>
+        </tr>
+        <tr>
+            <td>Original TrOCR checkpoint</td>
             <td>Alex</td>
             <td>3.10</td>
         </tr>
         <tr>
-            <td>Entire model</td>
+            <td>Original TrOCR checkpoint (with finetuning)</td>
             <td>Alex</td>
             <td>0.79</td>
         </tr>
         <tr>
-            <td>Decoder</td>
+            <td>MAML checkpoint (with finetuning)</td>
+            <td>Alex</td>
+            <td>0.77</td>
+        </tr>
+        <tr>
+            <td>Original checkpoint (with finetuning decoder)</td>
             <td>Alex</td>
             <td>0.34</td>
+        </tr>
+        <tr>
+            <td>MAML checkpoint (with finetuning decoder)</td>
+            <td>Alex</td>
+            <td>0.26</td>
         </tr>
     </table>
 </div>
