@@ -48,6 +48,8 @@ We wanted to keep the datasets we created relatively small to limit the amount d
 
 ## Evaluation Metrics
 
+To evaluate each of our approaches we used the character error rate or CER of our predictions. CER is a common metric in natural language processing tasks and is a measure of what percent of the sentence did the model correctly predict. Because a model has the capacity to make predictions far longer than the true label, the CER can be arbitrarily large for poor predictors. For reference many OCR models achieve a CER of around ~0.02. However, on Thomas' handwriting, some of these same models had a CER > 1.
+
 ## Approch 1
 
 
