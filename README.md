@@ -42,7 +42,9 @@ Being the good friends we are, we made our project goal to create a model that c
 ## Datasets
 To represent Thomas' handwriting, we created a dataset of 60 images of sentences he had written. We used 50 of these images across our different training approaches and 10 for testing. As a control we create a second dataset comprised of Alex's handwriting for the same sentences which is much easier to read. 
 
-<img src="dataset.png" alt="Alt text" align="left" class="padded-image" width="250"/>
+<img src="dataset.png" alt="Alt text" align="left" class="padded-image" width="500"/>
+
+We wanted to keep the datasets we created relatively small to limit the amount data a user with messy handwriting would need to provide to get an adapted model. However, some of our methods required a larger volume of data along with text from a large pool of writers. For these purposes, we used the IAM dataset, which is composed of ~10,000 lines of text from hundreds of unique writers.
 
 ## Evaluation Metrics
 
