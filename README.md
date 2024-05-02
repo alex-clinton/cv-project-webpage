@@ -145,7 +145,7 @@ The results shown above demonstrate that Thomas' dataset is both visually more d
 
 ## Approch 5 Meta learning
 
-Another idea we considered was to thing of classfying writing from different writers as related yet distinct tasks. This led us to adopt the paragdigm of meta-learning where the goal is to train a model that learns traits across similar tasks which are then leveraged when adapting to a specific task.
+Another idea we considered was to think of classfying writing from different writers as related yet distinct tasks. This led us to adopt the paragdigm of meta-learning where the goal is to train a model that learns traits across similar tasks which are then leveraged when adapting to a specific task. The motivation for doing this was realizing that letters for different writers can vary but should be somewhat consistent across all text for a particular writer. For example an 'a' may look different in Thomas' dataset and in Alex's dataset but all the 'a's in Thomas' dataset should look similar. 
 
 ## References
 [1] IAM?
