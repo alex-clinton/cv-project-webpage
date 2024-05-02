@@ -37,7 +37,7 @@ Digital writing has seen a signficant rise amongst students, academics, and buis
 
 ## Project Goal
 Thomas uses his iPad and a popular app called notability to manage the notes he takes. However, because of his unusually messy handwriting, notability's built in OCR model cannot recognize his handwriting meaning he cannot search his notes. This problem isn't specific to notability, other sophisticated OCR models also fail to recognize Thomas' handwriting. While handwriting recognition is considered to be a solved problem, we argue that our problem is more difficult because it is not “well defined”, in the sense that it is hard for humans to recognize what Thomas writes.
-Being the good friends we are, we made our project goal to create a model that could recognize his writing along. More broadly, our goal is to design a handwriting recongition system that superseeds human capabilities.
+Being the good friends we are, we made our project goal to create a model that could recognize his writing along. More broadly, our goal is to design a handwriting recongition system that superseeds human capabilities. To do this we tried 5 unique approaches to build such a model.
 
 ## Datasets
 To represent Thomas' handwriting, we created a dataset of 60 images of sentences he had written. We used 50 of these images across our different training approaches and 10 for testing. As a control we create a second dataset comprised of Alex's handwriting for the same sentences which is much easier to read. 
@@ -52,6 +52,9 @@ To evaluate each of our approaches we used the character error rate or CER of ou
 
 ## Approch 1 Naive Finetuning
 
+Our first approach was to take a modern OCR model and fine-tune it on Thomas' handwriting with the hope that the model could adapt quickly. We settled on TrOCR, a transformer based OCR model that had been trained on the IAM dataset.
+
+<img src="trocr.png" alt="Alt text" align="right" class="padded-image" width="300"/>
 
 ## Approch 2 Supervised domain adaptation
 
