@@ -58,7 +58,7 @@ Our first approach was to take a modern OCR model and fine-tune it on Thomas' ha
 
 In order to enable more efficient fine-tuning we also ran experiments where we frooze all of the weights in the encoder and kept the decoder weigths trainable. We also varied the number of images used in fine-tuning to see how much data was needed to adapt to a new writer.
 
-<div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: center;">
     <table style="flex: 1;">
         <tr>
             <th>Finetuned on</th>
