@@ -42,6 +42,8 @@ Being the good friends we are, we made our project goal to create a model that c
 ## Datasets
 To represent Thomas' handwriting, we created a dataset of 60 images of sentences he had written. We used 50 of these images across our different training approaches and 10 for testing. As a control we create a second dataset comprised of Alex's handwriting for the same sentences which is much easier to read. 
 
+<img src="dataset.png" alt="Alt text" align="left" class="padded-image" width="250"/>
+
 ## Evaluation Metrics
 
 ## Approch 1
