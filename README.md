@@ -145,11 +145,13 @@ The results shown above demonstrate that Thomas' dataset is both visually more d
 
 ## Approch 5 Meta learning
 
-Another idea we considered was to think of classfying writing from different writers as related yet distinct tasks. This led us to adopt the paragdigm of meta-learning where the goal is to train a model that learns traits across similar tasks which are then leveraged when adapting to a specific task. The motivation for doing this was realizing that letters for different writers can vary but should be somewhat consistent across all text for a particular writer. For example an 'a' may look different in Thomas' dataset and in Alex's dataset but all the 'a's in Thomas' dataset should look similar. 
+Another idea we considered was to think of classfying writing from different writers as related yet distinct tasks. This led us to adopt the paragdigm of meta-learning where the goal is to train a model that learns traits across similar tasks which are then leveraged when adapting to a specific task. The motivation for doing this was realizing that letters for different writers can vary but should be somewhat consistent across all text for a particular writer. For example an 'a' may look different in Thomas' dataset and in Alex's dataset but all the 'a's in Thomas' dataset should look similar. Thus, it may be more important to learn parameters which can be easily adapted to different writers than one set of parameters that performs best across all writers. To leverage writing samples from a variety of writers we applied MAML [3] to the IAM dataset. The idea of how we want to use meta-learning is shown in the following figure adapted from [3].
+
+<img src="meta_learning.png" alt="Alt text" class="padded-image" width="900"/>
 
 ## References
 [1] IAM?
 
 [2] Minghao Li et al. “Trocr: Transformer-based optical character recognition with pre-trained models”. In: Proceedings of the AAAI Conference on Artificial Intelligence . Vol. 37. 11. 2023, pp. 13094–13102.
 
-[3] 
+[3] Finn et al. 2017. Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks.
