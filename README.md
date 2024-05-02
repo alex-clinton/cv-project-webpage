@@ -58,6 +58,11 @@ Our first approach was to take a modern OCR model and fine-tune it on Thomas' ha
 
 In order to enable more efficient fine-tuning we also ran experiments where we frooze all of the weights in the encoder and kept the decoder weigths trainable. We also varied the number of images used in fine-tuning to see how much data was needed to adapt to a new writer.
 
+| Header 1 | Header 2 | Header 3 | 
+|----------|----------|----------|
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+
 | Header 1 | Header 2 | Header 3 |
 |----------|----------|----------|
 | Cell 1   | Cell 2   | Cell 3   |
@@ -76,5 +81,4 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
 
 [2] Minghao Li et al. “Trocr: Transformer-based optical character recognition with pre-trained models”. In: Proceedings of the AAAI Conference on Artificial Intelligence . Vol. 37. 11. 2023, pp. 13094–13102.
 
-
-more tex2t more tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2t
+[3] 
