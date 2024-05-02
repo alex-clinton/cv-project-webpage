@@ -1,1 +1,1 @@
-Edit page via index.md
+Edit page via editing index.md
