@@ -214,8 +214,10 @@ To leverage writing samples from a variety of writers we applied MAML [3] to the
 ## Analysis
 
 ## References
-[1] IAM?
+[1] Houlsby, Neil, et al. "Parameter-efficient transfer learning for NLP." International conference on machine learning. PMLR, 2019.
 
 [2] Minghao Li et al. “Trocr: Transformer-based optical character recognition with pre-trained models”. In: Proceedings of the AAAI Conference on Artificial Intelligence . Vol. 37. 11. 2023, pp. 13094–13102.
 
 [3] Finn et al. 2017. Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks.
+
+[4] Qi, Wang, et al. "Parameter-efficient tuning on layer normalization for pre-trained language models." arXiv preprint arXiv:2211.08682 (2022).
