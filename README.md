@@ -54,7 +54,8 @@ To evaluate each of our approaches we used the character error rate or CER of ou
 
 Our first approach was to take a modern OCR model and fine-tune it on Thomas' handwriting with the hope that the model could adapt quickly. We settled on TrOCR, a transformer based OCR model that had been trained on the IAM dataset.
 
-<img src="trocr.png" alt="Alt text" align="right" class="padded-image" width="300"/>
+<img src="trocr.png" alt="Alt text" align="right" class="padded-image" width="600"/>
+
 
 ## Approch 2 Supervised domain adaptation
 
