@@ -151,7 +151,7 @@ Another idea we considered was to think of classfying writing from different wri
 
 To leverage writing samples from a variety of writers we applied MAML [3] to the IAM dataset. The idea of how we want to use meta-learning is shown in the above figure adapted from [3]. Below we have the results obtained from applying MAML to TrOCR.
 
-<div style="display: flex; justify-content: center;">
+<div style="text-align: center;">
     <table>
         <tr>
             <th>Checkpoint</th>
@@ -210,6 +210,8 @@ To leverage writing samples from a variety of writers we applied MAML [3] to the
         </tr>
     </table>
 </div>
+
+## Analysis
 
 ## References
 [1] IAM?
