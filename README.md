@@ -135,6 +135,8 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
 | Cell 1   | Cell 2   | Cell 3   |
 | Cell 4   | Cell 5   | Cell 6   | -->
 
+The results shown above demonstrate that Thomas' dataset is both visually more difficult for humans and quantitatively more difficult for the OCR model than Alex's dataset. We also see that freezing the encoder facilitates more efficient fine-tuning in all instances.
+
 ## Approch 2 Supervised domain adaptation
 
 ## Approch 3 Transfer learning
