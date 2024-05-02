@@ -139,25 +139,25 @@ The results shown above demonstrate that Thomas' dataset is both visually more d
 
 ## Approch 2 Supervised domain adaptation
 
-<img src="supervised_domain_adaptation.png" alt="Alt text" class="padded-image" width="900"/>
+<img src="supervised_domain_adaptation.png" alt="Alt text" class="padded-image" width="400"/>
 
 The above figure is borrowed from [4].
 
 ## Approch 3 Transfer learning
 
-<img src="transfer_learning.png" alt="Alt text" class="padded-image" width="500"/>
+<img src="transfer_learning.png" alt="Alt text" class="padded-image" width="400"/>
 
 The above figure is borrowed from [1].
 
 ## Approch 4 Dual-decoder
 
-<img src="dual_decoder.png" alt="Alt text" class="padded-image" width="500"/>
+<img src="dual_decoder.png" alt="Alt text" class="padded-image" width="400"/>
 
 ## Approch 5 Meta learning
 
 Another idea we considered was to think of classfying writing from different writers as related yet distinct tasks. This led us to adopt the paragdigm of meta-learning where the goal is to train a model that learns traits across similar tasks which are then leveraged when adapting to a specific task. The motivation for doing this was realizing that letters for different writers can vary but should be somewhat consistent across all text for a particular writer. For example an 'a' may look different in Thomas' dataset and in Alex's dataset but all the 'a's in Thomas' dataset should look similar. Thus, it may be more important to learn parameters which can be easily adapted to different writers than one set of parameters that performs best across all writers. 
 
-<img src="meta_learning.png" alt="Alt text" class="padded-image" width="500"/>
+<img src="meta_learning.png" alt="Alt text" class="padded-image" width="900"/>
 
 To leverage writing samples from a variety of writers we applied MAML [3] to the IAM dataset. The idea of how we want to use meta-learning is shown in the above figure adapted from [3]. Below we have the results obtained from applying MAML to TrOCR.
 
