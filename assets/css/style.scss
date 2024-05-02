@@ -1,0 +1,18 @@
+---
+---
+
+@import 'jekyll-theme-cayman';
+
+.container {
+    text-align: center;
+}
+
+.container figcaption {
+    text-align: center; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+.container table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+}

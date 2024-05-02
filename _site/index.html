@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Recognizing Illegible Handwriting | By Khoi Nguyen, Alex Clinton, Zhuoming Liu, and Thomas Zeng</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Recognizing Illegible Handwriting" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="By Khoi Nguyen, Alex Clinton, Zhuoming Liu, and Thomas Zeng" />
+<meta property="og:description" content="By Khoi Nguyen, Alex Clinton, Zhuoming Liu, and Thomas Zeng" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Recognizing Illegible Handwriting" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Recognizing Illegible Handwriting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"By Khoi Nguyen, Alex Clinton, Zhuoming Liu, and Thomas Zeng","headline":"Recognizing Illegible Handwriting","name":"Recognizing Illegible Handwriting","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Recognizing Illegible Handwriting</h1>
+      <h2 class="project-tagline">By Khoi Nguyen, Alex Clinton, Zhuoming Liu, and Thomas Zeng</h2>
+      
+        <a href="https://github.com/mtzig/badwriting_OCR" class="btn">GitHub repository</a>
+        <a href="assets/files/Slide.pdf" class="btn">Presentation slide</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="introduction">Introduction</h1>
+
+<p>Digital writing has experienced a significant surge in popularity among students, academics, and business professionals, thanks to the data processing capabilities of tablets and the enhanced precision of styluses. Utilizing tablets for note-taking allows users to effortlessly organize, share, and search their notes, with the latter function making use of optical character recognition (OCR) technology. OCR models harness tools from computer vision and machine learning, including convolutional neural networks and vision transformers. However, there exists an intriguing outlier amidst this digital revolution – Thomas Zeng.</p>
+
+<div class="container">
+<img src="assets/images/thomas_notability.png" width="300" />
+<figcaption> Notability fails to recognizing Thomas's hand writting. </figcaption>
+</div>
+
+<p>Thomas relies on his iPad and the popular app Notability for note management. However, his exceptionally messy handwriting poses a unique challenge: Notability’s built-in OCR model struggles to decipher his notes, rendering them unsearchable. This issue extends beyond Notability; even sophisticated OCR models falter in deciphering Thomas’s handwriting. While handwriting recognition is generally considered a solved problem, we contend that our situation presents a greater challenge due to its lack of clarity – even humans find it difficult to decipher Thomas’s writing.</p>
+
+<p>As good friends, we took it upon ourselves to address this dilemma. Our project’s primary objective became clear: to develop a model capable of accurately recognizing Thomas’s handwriting. More broadly, we aim to design a handwriting recognition system that surpasses human capabilities. To achieve this ambitious goal, we explored five distinct approaches in building such a model.</p>
+
+<h1 id="preliminaries">Preliminaries</h1>
+
+<h2 id="datasets">Datasets</h2>
+
+<h3 id="thomas-and-alexs-handwriting">Thomas and Alex’s handwriting</h3>
+
+<p>To capture Thomas’s handwriting style accurately, we assembled a dataset comprising 60 images of sentences he had written. Of these, 50 images are allocated for training across our various approaches, while the remaining 10 are reserved for testing purposes. As a control, we also compiled a secondary dataset featuring sentences written by Alex, whose handwriting is notably clearer and easier to interpret.</p>
+
+<div class="container">
+<img src="assets/images/dataset.png" />
+<figcaption> Top: example of Alex's handwriting. Bottom: example of Thomas's handwriting.</figcaption>
+</div>
+
+<h3 id="iam-dataset">IAM dataset</h3>
+
+<p>For training-based approaches, we also consider using IAM dataset [1]. The IAM dataset comprises an extensive collection of handwritten samples contributed by 657 individual writers. It encompasses 1,539 scanned pages of text, featuring 5,685 accurately labeled isolated sentences. This dataset has been widely used in various state-of-the-art OCR methods [2].</p>
+
+<div class="container">
+<img src="assets/images/IAM.jpg" />
+<figcaption> Example of handwriting in IAM dataset. Figure is from [1].</figcaption>
+</div>
+
+<h2 id="evaluation-metrics---character-error-rate">Evaluation metrics - character error rate</h2>
+
+<p>To evaluate each of our approaches we used the character error rate or CER of our predictions. CER is a common metric in natural language processing tasks and is a measure of what percent of the sentence did the model correctly predict. Because a model has the capacity to make predictions far longer than the true label, the CER can be arbitrarily large for poor predictors. For reference a good OCR model typically achieves a CER of around ~0.02. However, on Thomas’ handwriting, some of these same models had a CER &gt; 1.</p>
+
+<div class="container">
+<img src="assets/images/cer.png" />
+<figcaption> Character Error Rate (CER). </figcaption>
+</div>
+
+<h2 id="baseline--trocr">Baseline -TrOCR</h2>
+
+<p>In this project, we consider TrOCR [2] as our baseline. TrOCR is a transformer-based model for end-to-end text recognition. It consists of an image Transformer encoder and an autoregressive text Transformer decoder. The TrOCR model that is pretrained on IAM dataset is avalable on HuggingFace (<a src="microsoft/trocr-small-handwritten"> microsoft/trocr-small-handwritten </a>).</p>
+
+<div class="container">
+<img src="assets/images/trocr_architecture.jpg" />
+<figcaption> Overview of TrOCR architecture. The model consists of an image Transformer encoder and an autoregressive text Transformer decoder. Figure is from [2].</figcaption>
+</div>
+
+<h1 id="methods">Methods</h1>
+
+<h2 id="aprroach-1---naive-finetuning">Aprroach 1 - Naive Finetuning</h2>
+
+<p>Our first approach was to fine-tune the baseline on Thomas’ handwriting with the hope that the model could adapt quickly. In order to enable more efficient fine-tuning we also ran experiments where we frooze all of the weights in the encoder while keeping the decoder weigths trainable. We also varied the number of images used in fine-tuning to see how much data was needed to adapt to a new writer. Results are shown in Table 1 and Table 2 respectively.</p>
+
+<div class="container">
+    <table class="center" style="width: 50%; flex: 1;">
+        <tr>
+            <th>Finetuned on</th>
+            <th>Dataset</th>
+            <th>CER</th>
+        </tr>
+        <tr>
+            <td>None</td>
+            <td>Thomas</td>
+            <td>5.06</td>
+        </tr>
+        <tr>
+            <td>Entire model</td>
+            <td>Thomas</td>
+            <td>0.84</td>
+        </tr>
+        <tr>
+            <td>Decoder only</td>
+            <td>Thomas</td>
+            <td>0.65</td>
+        </tr>
+        <tr>
+            <td>None</td>
+            <td>Alex</td>
+            <td>3.10</td>
+        </tr>
+        <tr>
+            <td>Entire model</td>
+            <td>Alex</td>
+            <td>0.79</td>
+        </tr>
+        <tr>
+            <td>Decoder</td>
+            <td>Alex</td>
+            <td>0.34</td>
+        </tr>
+    </table>
+    <figcaption> Table 1: Results of naive finetuning TrOCR model on Thomas and Alex's handwriting.</figcaption>
+</div>
+
+<p><br /></p>
+
+<div class="container">
+    <table class="center" style="width: 50%; flex: 1;">
+        <tr>
+            <th># of Images</th>
+            <th>Best CER (Thomas)</th>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>0.65</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>0.89</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>0.92</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>1.74</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2.62</td>
+        </tr>
+    </table>
+    <figcaption> Table 2: Results of varying number of labeled samples in finetuning the TrOCR model.</figcaption>
+</div>
+
+<p>The results shown above demonstrate that Thomas’ dataset is both visually more difficult for humans and quantitatively more difficult for the OCR model than Alex’s dataset. We also see that freezing the encoder facilitates more efficient fine-tuning in all instances. However, the performance is still far away from what we would hope for in an OCR model.</p>
+
+<h2 id="aprroach-2---supervised-domain-adaptation">Aprroach 2 - Supervised domain adaptation</h2>
+
+<div class="container">
+<img src="assets/images/supervised_domain_adaptation.png" width="400px" />
+<figcaption> Figure is from [3].</figcaption>
+</div>
+
+<h2 id="aprroach-3---transfer-learning">Aprroach 3 - Transfer learning</h2>
+
+<div class="container">
+<img src="assets/images/transfer_learning.png" width="400px" />
+<figcaption> Figure is from [4].</figcaption>
+</div>
+
+<h2 id="aprroach-4---dual-decoder">Aprroach 4 - Dual-decoder</h2>
+
+<div class="container">
+<img src="assets/images/dual_decoder.png" width="300px" />
+<figcaption> .</figcaption>
+</div>
+
+<h2 id="aprroach-5---meta-learning">Aprroach 5 - Meta learning</h2>
+
+<div class="container">
+<img src="assets/images/meta_learning.png" />
+<figcaption> We split the IAM dataset into handwritings of different users and use MAML [5], a meta learning methods, to pretrain the TrOCR model. The meta learning mechanism allows our model to easily adapted to handwriting of novel users, e.g., Thomas and Alex.</figcaption>
+</div>
+
+<h1 id="references">References</h1>
+
+<p>[1] <b>A full English sentence database for off-line handwriting recognition.</b> <br />
+    Marti, U-V and Bunke, Horst. In Proceedings of the Fifth International Conference on Document Analysis and Recognition, 1999, pp. 705–708.</p>
+
+<p>[2] <b>Trocr: Transformer-based optical character recognition with pre-trained models.</b> <br />
+   Li, Minghao and Lv, Tengchao and Chen, Jingye and Cui, Lei and Lu, Yijuan and Florencio, Dinei and Zhang, Cha and Li, Zhoujun and Wei, Furu. In Proceedings of the AAAI Conference on Artificial Intelligence, 2023, pp. 13094–13102.</p>
+
+<p>[3] <b>Parameter-efficient tuning on layer normalization for pre-trained language models.</b> <br />
+    Qi, Wang and Ruan, Yu-Ping and Zuo, Yuan and Li, Taihao. In arXiv preprint arXiv:2211.08682, 2022.</p>
+
+<p>[4] <b>Parameter-efficient transfer learning for NLP.</b> <br />
+    Houlsby, Neil and Giurgiu, Andrei and Jastrzebski, Stanislaw and Morrone, Bruna and De Laroussilhe, Quentin and Gesmundo, Andrea and Attariyan, Mona and Gelly, Sylvain. In International conference on machine learning, 2019, pp. 2790–2799.</p>
+
+<p>[5] <b>Model-agnostic meta-learning for fast adaptation of deep networks.</b> <br />
+    Finn, Chelsea and Abbeel, Pieter and Levine, Sergey. In International conference on machine learning, 2017, pp. 1126–1135.</p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/mtzig/badwriting_OCR"></a> is maintained by <a href=""></a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
