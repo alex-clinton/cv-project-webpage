@@ -61,8 +61,30 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
 <div style="display: flex; justify-content: space-between;">
     <table style="flex: 1;">
         <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
+            <th>Finetuned on</th>
+            <th>Dataset</th>
+            <th>CER</th>
+        </tr>
+        <tr>
+            <td>None</td>
+            <td>Thomas</td>
+            <td>0.69</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
         </tr>
         <tr>
             <td>Cell 1</td>
