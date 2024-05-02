@@ -52,7 +52,7 @@ To evaluate each of our approaches we used the character error rate or CER of ou
 
 ## Approch 1 Naive Finetuning
 
-Our first approach was to take a modern OCR model and fine-tune it on Thomas' handwriting with the hope that the model could adapt quickly. We settled on TrOCR, a transformer based OCR model that had been trained on the IAM dataset.
+Our first approach was to take a modern OCR model and fine-tune it on Thomas' handwriting with the hope that the model could adapt quickly. We settled on TrOCR, a transformer based OCR model that had been trained on the IAM dataset. Below is a graphic taken from the paper on TrOCR outlining its transformer architecture.
 
 <img src="trocr.png" alt="Alt text" align="right" class="padded-image" width="600"/>
 
@@ -66,6 +66,8 @@ Our first approach was to take a modern OCR model and fine-tune it on Thomas' ha
 ## Approch 5 Meta learning
 
 ## References
-1. IAM?
-2. TrOCR
+[1] IAM?
+[2] Minghao Li et al. “Trocr: Transformer-based optical character recognition with pre-trained models”. In: Proceedings of the AAAI Conference on Artificial Intelligence . Vol. 37. 11. 2023, pp. 13094–13102.
+
+
 more tex2t more tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2tmore tex2t
