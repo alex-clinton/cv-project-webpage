@@ -78,7 +78,7 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
         <tr>
             <td>Decoder only</td>
             <td>Thomas</td>
-            <td>0.69</td>
+            <td>0.65</td>
         </tr>
         <tr>
             <td>None</td>
@@ -99,12 +99,28 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
 
     <table style="flex: 1;">
         <tr>
-            <th>Header 3</th>
-            <th>Header 4</th>
+            <th># of Images</th>
+            <th>Best CER (Thomas)</th>
         </tr>
         <tr>
-            <td>Cell 3</td>
-            <td>Cell 4</td>
+            <td>50</td>
+            <td>0.65</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>0.89</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>0.92</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>1.74</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2.62</td>
         </tr>
     </table>
 </div>
