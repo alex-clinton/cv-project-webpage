@@ -68,27 +68,32 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
         <tr>
             <td>None</td>
             <td>Thomas</td>
+            <td>5.06</td>
+        </tr>
+        <tr>
+            <td>Entire model</td>
+            <td>Thomas</td>
+            <td>0.84</td>
+        </tr>
+        <tr>
+            <td>Decoder only</td>
+            <td>Thomas</td>
             <td>0.69</td>
         </tr>
         <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
+            <td>None</td>
+            <td>Alex</td>
+            <td>3.10</td>
         </tr>
         <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
+            <td>Entire model</td>
+            <td>Alex</td>
+            <td>0.79</td>
         </tr>
         <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-        </tr>
-        <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-        </tr>
-        <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
+            <td>Decoder</td>
+            <td>Alex</td>
+            <td>0.34</td>
         </tr>
     </table>
 
@@ -103,7 +108,7 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
         </tr>
     </table>
 </div>
-
+<!---
 | Header 1 | Header 2 | Header 3 | 
 |----------|----------|----------|
 | Cell 1   | Cell 2   | Cell 3   |
@@ -112,7 +117,7 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
 | Header 1 | Header 2 | Header 3 |
 |----------|----------|----------|
 | Cell 1   | Cell 2   | Cell 3   |
-| Cell 4   | Cell 5   | Cell 6   |
+| Cell 4   | Cell 5   | Cell 6   | -->
 
 ## Approch 2 Supervised domain adaptation
 
