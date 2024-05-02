@@ -52,9 +52,9 @@ To evaluate each of our approaches we used the character error rate or CER of ou
 
 ## Approch 1 Naive Finetuning
 
-Our first approach was to take a modern OCR model and fine-tune it on Thomas' handwriting with the hope that the model could adapt quickly. We settled on TrOCR, a transformer based OCR model that had been trained on the IAM dataset. Below is a graphic taken from the paper on TrOCR outlining its transformer architecture.
+Our first approach was to take a modern OCR model and fine-tune it on Thomas' handwriting with the hope that the model could adapt quickly. We settled on TrOCR, a transformer based OCR model that had been trained on the IAM dataset [2]. Below is a graphic taken from [2] outlining the transformer architecture of TrOCR.
 
-<img src="trocr.png" alt="Alt text" align="right" class="padded-image" width="600"/>
+<img src="trocr.png" alt="Alt text" class="padded-image" width="900"/>
 
 
 ## Approch 2 Supervised domain adaptation
