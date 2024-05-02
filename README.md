@@ -67,6 +67,7 @@ Our first approach was to take a modern OCR model and fine-tune it on Thomas' ha
 
 ## References
 [1] IAM?
+
 [2] Minghao Li et al. “Trocr: Transformer-based optical character recognition with pre-trained models”. In: Proceedings of the AAAI Conference on Artificial Intelligence . Vol. 37. 11. 2023, pp. 13094–13102.
 
 
