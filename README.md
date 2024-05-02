@@ -135,7 +135,7 @@ In order to enable more efficient fine-tuning we also ran experiments where we f
 | Cell 1   | Cell 2   | Cell 3   |
 | Cell 4   | Cell 5   | Cell 6   | -->
 
-The results shown above demonstrate that Thomas' dataset is both visually more difficult for humans and quantitatively more difficult for the OCR model than Alex's dataset. We also see that freezing the encoder facilitates more efficient fine-tuning in all instances.
+The results shown above demonstrate that Thomas' dataset is both visually more difficult for humans and quantitatively more difficult for the OCR model than Alex's dataset. We also see that freezing the encoder facilitates more efficient fine-tuning in all instances. However, the performance is still far away from what we would hope for in an OCR model.
 
 ## Approch 2 Supervised domain adaptation
 
@@ -144,6 +144,8 @@ The results shown above demonstrate that Thomas' dataset is both visually more d
 ## Approch 4 Dual-decoder
 
 ## Approch 5 Meta learning
+
+Another idea we considered was to thing of classfying writing from different writers as related yet distinct tasks. This led us to adopt the paragdigm of meta-learning where the goal is to train a model that learns traits across similar tasks which are then leveraged when adapting to a specific task.
 
 ## References
 [1] IAM?
