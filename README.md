@@ -151,7 +151,7 @@ The above figure is borrowed from [1].
 
 ## Approch 4 Dual-decoder
 
-<img src="dual_decoder.png" alt="Alt text" class="padded-image" width="400"/>
+<img src="dual_decoder.png" alt="Alt text" class="padded-image" width="350"/>
 
 ## Approch 5 Meta learning
 
