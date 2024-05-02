@@ -145,9 +145,51 @@ The results shown above demonstrate that Thomas' dataset is both visually more d
 
 ## Approch 5 Meta learning
 
-Another idea we considered was to think of classfying writing from different writers as related yet distinct tasks. This led us to adopt the paragdigm of meta-learning where the goal is to train a model that learns traits across similar tasks which are then leveraged when adapting to a specific task. The motivation for doing this was realizing that letters for different writers can vary but should be somewhat consistent across all text for a particular writer. For example an 'a' may look different in Thomas' dataset and in Alex's dataset but all the 'a's in Thomas' dataset should look similar. Thus, it may be more important to learn parameters which can be easily adapted to different writers than one set of parameters that performs best across all writers. To leverage writing samples from a variety of writers we applied MAML [3] to the IAM dataset. The idea of how we want to use meta-learning is shown in the following figure adapted from [3].
+Another idea we considered was to think of classfying writing from different writers as related yet distinct tasks. This led us to adopt the paragdigm of meta-learning where the goal is to train a model that learns traits across similar tasks which are then leveraged when adapting to a specific task. The motivation for doing this was realizing that letters for different writers can vary but should be somewhat consistent across all text for a particular writer. For example an 'a' may look different in Thomas' dataset and in Alex's dataset but all the 'a's in Thomas' dataset should look similar. Thus, it may be more important to learn parameters which can be easily adapted to different writers than one set of parameters that performs best across all writers. 
 
 <img src="meta_learning.png" alt="Alt text" class="padded-image" width="900"/>
+
+To leverage writing samples from a variety of writers we applied MAML [3] to the IAM dataset. The idea of how we want to use meta-learning is shown in the above figure adapted from [3]. Below we have the results obtained from applying MAML to TrOCR.
+
+<div style="display: flex; justify-content: center;">
+    <table style="width: 50%; flex: 1;">
+        <tr>
+            <th>Finetuned on</th>
+            <th>Dataset</th>
+            <th>CER</th>
+        </tr>
+        <tr>
+            <td>None</td>
+            <td>Thomas</td>
+            <td>5.06</td>
+        </tr>
+        <tr>
+            <td>Entire model</td>
+            <td>Thomas</td>
+            <td>0.84</td>
+        </tr>
+        <tr>
+            <td>Decoder only</td>
+            <td>Thomas</td>
+            <td>0.65</td>
+        </tr>
+        <tr>
+            <td>None</td>
+            <td>Alex</td>
+            <td>3.10</td>
+        </tr>
+        <tr>
+            <td>Entire model</td>
+            <td>Alex</td>
+            <td>0.79</td>
+        </tr>
+        <tr>
+            <td>Decoder</td>
+            <td>Alex</td>
+            <td>0.34</td>
+        </tr>
+    </table>
+</div>
 
 ## References
 [1] IAM?
