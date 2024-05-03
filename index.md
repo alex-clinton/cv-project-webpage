@@ -4,16 +4,16 @@ layout: default
 
 # 1. Introduction
 
-Digital writing has experienced a significant surge in popularity among students, academics, and business professionals, thanks to the data processing capabilities of tablets and the enhanced precision of styluses. Utilizing tablets for note-taking allows users to effortlessly organize, share, and search their notes, with the latter function making use of optical character recognition (OCR) technology. OCR models harness tools from computer vision and machine learning, including convolutional neural networks and vision transformers. However, there exists an intriguing outlier amidst this digital revolution – Thomas Zeng.
+Digital writing has experienced a significant surge in popularity among students, academics, and business professionals, thanks to the data processing capabilities of tablets and the enhanced precision of styluses. Utilizing tablets for note-taking allows users to effortlessly organize, share, and search their notes, with the latter function making use of optical character recognition (OCR) technology. OCR models harness tools from computer vision and machine learning, including convolutional neural networks and vision transformers. However, these inovations are no match for the writing of Thomas Zeng.
 
 <div class="container">
 <img src="assets/images/thomas_notability.png" width="300"/>
 <figcaption> Notability fails to recognizing Thomas's hand writting. </figcaption>
 </div>
 
-Thomas relies on his iPad and the popular app Notability for note management. However, his exceptionally messy handwriting poses a unique challenge: Notability's built-in OCR model struggles to decipher his notes, rendering them unsearchable. This issue extends beyond Notability; even sophisticated OCR models falter in deciphering Thomas's handwriting. While handwriting recognition is generally considered a solved problem, we contend that our situation presents a greater challenge due to its lack of clarity – even humans find it difficult to decipher Thomas's writing.
+Thomas relies on his iPad and the popular app Notability for note management. However, his exceptionally messy handwriting poses a unique challenge: Notability's built-in OCR model struggles to decipher his notes, rendering them unsearchable. This issue extends beyond Notability; even sophisticated OCR models falter in deciphering Thomas's handwriting. While handwriting recognition is generally considered a solved problem, we contend that our task is even more difficult as humans struggle to decipher Thomas's writing.
 
-As good friends, we took it upon ourselves to address this dilemma. Our project's primary objective became clear: to develop a model capable of accurately recognizing Thomas's handwriting. More broadly, we aim to design a handwriting recognition system that surpasses human capabilities. To achieve this ambitious goal, we explored five distinct approaches in building such a model.
+Being the good friends we are, we took it upon ourselves to address this dilemma. Our project's primary objective is to develop a model capable of accurately recognizing Thomas's handwriting. More broadly, we aim to design a handwriting recognition system that surpasses human capabilities. Towards this goal, we explored five distinct approaches in building such a model.
 
 # 2. Preliminaries
 
@@ -57,11 +57,11 @@ In this project, we consider TrOCR [2] as our baseline. TrOCR is a transformer-b
 
 # 3. Methods
 
-In this sections, we describe five approaches that we have tried to improve the performance of the TrOCR in recognizing illegible handwriting.
+In the following sections, we describe five approaches that we used to try and improve the performance of the TrOCR on Thomas' handwriting.
 
 ## Aprroach 1 - Naive finetuning
 
-Our first approach was to fine-tune the baseline on Thomas' handwriting with the hope that the model could adapt quickly. In order to enable more efficient fine-tuning we also ran experiments where we frooze all of the weights in the encoder while keeping the decoder weigths trainable. Results are reported in Table 1. The results demonstrate that Thomas' dataset is both visually more difficult for humans and quantitatively more difficult for the OCR model than Alex's dataset. We also see that freezing the encoder facilitates more efficient fine-tuning in all instances. However, the performance is still far away from what we would hope for in an OCR model.
+Our first approach was to fine-tune the baseline TrOCR model on Thomas' handwriting with the hope that the model could adapt quickly. In order to enable more efficient fine-tuning we also ran experiments where we frooze all of the weights in the encoder while keeping the decoder weigths trainable. Results are reported in Table 1. The results demonstrate that Thomas' dataset is both visually more difficult for humans and quantitatively more difficult for the OCR model than Alex's dataset. We also see that freezing the encoder facilitates more efficient fine-tuning in all instances. However, the performance is still far away from what we would hope for in an OCR model.
 
 <div class="container">
     <table class="center" style="width: 50%; flex: 1;">
