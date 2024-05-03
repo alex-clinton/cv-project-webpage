@@ -139,14 +139,14 @@ We also varied the number of images used in fine-tuning to see how much data was
 
 
 ## Aprroach 2 - Supervised domain adaptation
-For this approach, our motivation is that the features of unseen handwriting might have substantially different statistics from those of the data that the model have been trained on. This can be seen as a supervised domain adaptation where we seek to mitigate the statistical gap between seen and unseen data. We consider one of the most popular domain adaptation method: tuning the norm layers of the network [3], see figure below. After tuning, the model is native to the features of the handwriting of the target user.
+For this approach, our motivation is that the features of unseen handwriting might have substantially different statistical properties from those of the data that the model has been trained on. This can be seen as a supervised domain adaptation task where we seek to mitigate the statistical gap between seen and unseen data. We consider one of the most popular domain adaptation methods: tuning the norm layers of the network [3], see figure below. After tuning, the model is adapted to the features of the handwriting of the target user.
 
 <div class="container">
 <img src="assets/images/supervised_domain_adaptation.png" width="400px"/>
 <figcaption> LayerNorm-tuning. Figure is from [3].</figcaption>
 </div>
 
-In this experiments, we try to tune different norm layers of the TrOCR model. From Table 3, tuning all norm layers of the model produces the best performance, compared to just tuning the norm layers in the decoder. However, the overall effect of this approach is insignificant.
+In these experiments, we try to tune different norm layers of the TrOCR model. As seen in Table 3, tuning all norm layers of the model produces the best performance, compared to just tuning the norm layers in the decoder. However, the overall effect of this approach is relatively limited.
 
 <div class="container">
     <table class="center" style="width: 70%; flex: 1;">
@@ -269,10 +269,10 @@ While fine-tuning the decoder of the TrOCR model, we suspected that it might be 
     <figcaption> Table 5: Results of adopting a Dual-decoder in finetuning to Thomas and Alex's handwriting.</figcaption>
 </div>
 
-We can see that the Dual-decoder, to some extent, mitigates the overfiting issue, outperforming previous approaches.
+We can see that the Dual-decoder, to some extent, mitigates the overfiting issue and outperforms previous approaches.
 
 ## Aprroach 5 - Meta learning
-In practical scenarios, it's crucial for the model to quickly adapt to diverse handwriting styles exhibited by various users. To this extent, we approach this challenge as a meta-learning task. Specifically, we consider adapting to the handwriting of a particular user as a small task. The model is meta-trained to enable rapid adaptation to any new task with just a few finetuning steps.
+In practical scenarios, it's crucial for the model to quickly adapt to diverse handwriting styles exhibited by various users. As a results, we decided to try framing our problem as a meta-learning task. Specifically, we consider adapting to the handwriting of a particular user as a small task. The model is meta-trained to enable rapid adaptation to any new task with just a few finetuning steps.
 
 We employ Model-Agnostic Meta Learning (MAML) [5], a versatile framework for meta-training deep learning models. We meta-train the TrOCR model with MAML on the IAM dataset with the hope that the meta-trained model can easily adapt to Thomas and Alex's handwriting as illustrated in the figure below.
 
