@@ -387,6 +387,8 @@ We also include a [live demo](https://colab.research.google.com/drive/1g81RcersB
 
 # 5. Conclusion
 
+Across all of our approaches we have seen that MAML and the use of the dual decoder perform the best. However, our final results on Thomas’ handwriting are still poor compared to our target CER of ~0.02. Across our different approaches we noticed some commonalities that motivate our future work. Many of the ideas we implemented performed better as the number of image samples increased. This tells us that classifying Thomas’ handwriting was a sufficiently different task from classifying other users’ handwriting as hypothesized. It also supports the idea that performance can be further improved with access to more diverse data. While we implemented some data augmentation, these methods can be expanded upon to enrich the pool of training data. Additionally, moving to the larger version of TrOCR may provide better results on all of our downstream approaches.
+
 # 6. References
 
 [1] <b>A full English sentence database for off-line handwriting recognition.</b> <br>
