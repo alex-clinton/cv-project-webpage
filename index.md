@@ -383,6 +383,8 @@ We show the qualitative results of our best model on Alex's handwriting.
 <figcaption> Predict: He bought shares of the small-cap. Ground-truth: He bought shares of the small-cap focused iShares.</figcaption>
 </div>
 
+We also include a [live demo](https://colab.research.google.com/drive/1g81RcersBBUUttUm174K5HDO2s8h07IA?usp=sharing#scrollTo=ra4CFCiiJ2Bl) (via colab) of the model after MAML and finetuning on some of Thomas's handwriting.
+
 # 5. Conclusion
 
 # 6. References
