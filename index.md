@@ -383,9 +383,9 @@ We show the qualitative results of our best model on Alex's handwriting.
 <figcaption> Predict: He bought shares of the small-cap. Ground-truth: He bought shares of the small-cap focused iShares.</figcaption>
 </div>
 
-# 4. Conclusion
+# 5. Conclusion
 
-# 5. References
+# 6. References
 
 [1] <b>A full English sentence database for off-line handwriting recognition.</b> <br>
     Marti, U-V and Bunke, Horst. In Proceedings of the Fifth International Conference on Document Analysis and Recognition, 1999, pp. 705--708.
