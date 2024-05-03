@@ -1,4 +1,5 @@
 ---
+title: Recognizing Illegible Handwriting
 layout: default
 ---
 
